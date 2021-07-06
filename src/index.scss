@@ -1,5 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~bootstrap/scss/_variables';
+@import './styles/variables';
+@import './styles/mixins';
 
 * {
   margin: 0px;
@@ -9,29 +11,43 @@
 
 body,
 html,
+.app,
 #root {
   height: 100%;
   width: 100%;
 }
 
-$base-color: white;
-$secondary-color: black;
-$accent-color: red;
-$xs: 0;
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-$xxl: 1400px;
-
-@mixin flex-row {
-  display: flex;
+.screen {
+  @include fluid;
+  @include flex-row;
+  justify-content: center;
 }
-@mixin flex-column {
-  display: flex;
-  flex-direction: columnn;
-}
-@mixin fluid {
+.screen-main {
   height: 100%;
   width: 100%;
+  max-width: 1200px;
+  background-color: white;
+}
+.screen-banner {
+  height: 100%;
+  width: 100%;
+  padding: 300px 0 200px 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.screen-footer {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+
+  height: 164px;
+  width: 100%;
+  padding: 70px 0 61px 0;
+}
+.screen-footer-content {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
 }

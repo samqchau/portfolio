@@ -16,12 +16,12 @@ const Header = () => {
             <img className='gh-icon' src='/pngs/gh_64.png' alt='Github' />
           </div>
         </div>
-      </div>
-      <div className='header-nav-items'>
-        <div className='header-nav-item'>Home</div>
-        <div className='header-nav-item'>About</div>
-        <div className='header-nav-item'>Projects</div>
-        <div className='header-nav-item'>Contact</div> |
+        <div className='header-nav-items'>
+          <div className='header-nav-item'>Home</div>
+          <div className='header-nav-item'>About</div>
+          <div className='header-nav-item'>Projects</div>
+          <div className='header-nav-item'>Contact</div> |
+        </div>
       </div>
     </div>
   );

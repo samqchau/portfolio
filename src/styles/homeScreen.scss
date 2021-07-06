@@ -1,0 +1,37 @@
+@import './mixins';
+@import './variables';
+
+.homeScreen {
+  background-image: url('../images/back.jpg');
+  background-size: cover;
+}
+.homeScreen-main {
+  background-color: rgba(256, 256, 256, 0.2);
+  border: 1px solid white;
+  color: white;
+}
+.homeScreen-main-resume-button {
+  padding: 20px 35px 18px 35px;
+  background: linear-gradient(
+    -135deg,
+    rgba(163, 69, 251, 1) 0%,
+    rgba(251, 189, 65, 1) 100%
+  );
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  letter-spacing: 2px;
+  border-radius: 2px;
+}
+.homeScreen-main-resume-button:hover {
+  border-radius: 36px;
+}
+.homeScreen-banner-content {
+  max-width: 500px;
+  letter-spacing: 1px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid white;
+}

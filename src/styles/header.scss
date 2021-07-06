@@ -1,26 +1,26 @@
-@import '../index.scss';
+@import './mixins';
+@import './variables';
 
 .header {
   width: 100%;
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: fixed;
 }
 .header-nav {
-  max-width: 1800px;
   @include flex-row;
   justify-content: space-between;
   width: 100%;
+  max-width: 1170px;
 }
 .header-nav-items,
 .header-nav-socials {
   display: flex;
   align-items: center;
-}
-.header-nav-items {
-  margin-right: 15px;
 }
 .header-nav-item {
   color: white;
@@ -29,9 +29,7 @@
   margin-left: 8px;
   cursor: pointer;
 }
-.header-nav-socials {
-  margin-left: 15px;
-}
+
 .icon-container {
   height: 40px;
   width: 40px;
