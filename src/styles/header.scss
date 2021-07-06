@@ -1,0 +1,63 @@
+@import '../index.scss';
+
+.header {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.header-nav {
+  max-width: 1800px;
+  @include flex-row;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-nav-items,
+.header-nav-socials {
+  display: flex;
+  align-items: center;
+}
+.header-nav-items {
+  margin-right: 15px;
+}
+.header-nav-item {
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.header-nav-socials {
+  margin-left: 15px;
+}
+.icon-container {
+  height: 40px;
+  width: 40px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) inset 10px 10px 5px,
+    rgba(0, 0, 0, 0.3) inset -10px -10px 5px;
+  transition: all 0.2s ease-in;
+}
+.icon-container:hover {
+  background-color: rgb(240, 240, 240);
+  box-shadow: rgba(248, 248, 248, 0.829) inset 1px 1px 5px,
+    rgba(73, 73, 73, 0.5) inset -1px -1px 5px;
+}
+.icon {
+  height: 20px;
+  width: 20px;
+}
+.gh-icon {
+  height: 25px;
+  width: 25px;
+}
