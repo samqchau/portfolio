@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 import Header from './components/Header';
 import HomeScreen from './screens/HomeScreen';
 import ContactScreen from './screens/ContactScreen';
+import ProjectsScreen from './screens/ProjectsScreen';
+import Footer from './components/Footer.jsx';
 
 function App() {
   const appRef = useRef();
@@ -32,17 +34,9 @@ function App() {
           <div className='app-main-content'>
             <div className='left-banner screen-banner'>
               <HomeScreen />
+              <ProjectsScreen />
               <ContactScreen />
-              <div className='screen-footer'>
-                <div className='screen-footer-content'>
-                  <div className='footer-content-left'>
-                    Designed By: Samuel Chau
-                  </div>
-                  <div className='footer-content-right'>
-                    Github Facebook LinkedIn
-                  </div>
-                </div>
-              </div>
+              <Footer/>
             </div>
           </div>
         </div>
