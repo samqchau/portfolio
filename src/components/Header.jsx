@@ -6,11 +6,11 @@ const Header = ({ windowX, appScrollY }) => {
     <div
       className='header'
       style={{
-        paddingTop: `${
-          windowX > 800 && appScrollY < 40 ? `${40 - appScrollY}px` : '8px'
+        marginTop: `${
+          windowX > 800 && appScrollY < 40 ? `${40 - appScrollY}px` : '0px'
         }`,
         backgroundColor: `${
-          appScrollY < 40 ? 'rgba(0,0,0,0)' : 'rgba(0, 0, 0, 0.86)'
+          appScrollY < 40 ? 'rgba(0,0,0,0)' : 'rgb(0, 0, 0)'
         }`,
       }}
     >
