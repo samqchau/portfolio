@@ -1,9 +1,19 @@
 import React from 'react';
 import '../styles/header.scss';
 
-const Header = () => {
+const Header = ({ windowX, appScrollY }) => {
   return (
-    <div className='header'>
+    <div
+      className='header'
+      style={{
+        paddingTop: `${
+          windowX > 800 && appScrollY < 40 ? `${40 - appScrollY}px` : '8px'
+        }`,
+        backgroundColor: `${
+          appScrollY < 40 ? 'rgba(0,0,0,0)' : 'rgba(0, 0, 0, 0.86)'
+        }`,
+      }}
+    >
       <div className='header-nav'>
         <div className='header-nav-socials'>
           <div className='icon-container' title='Dribble' alt='Dribble'>
