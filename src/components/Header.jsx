@@ -6,12 +6,14 @@ const Header = ({ windowX, appScrollY }) => {
     <div
       className='header'
       style={{
-        marginTop: `${
-          windowX > 800 && appScrollY < 40 ? `${40 - appScrollY}px` : '0px'
+        paddingTop: `${
+          windowX > 800 && appScrollY < 40 ? `${36 - appScrollY}px` : '6px'
         }`,
+        marginTop: `${appScrollY < 40 && windowX < 800 ? '6px' : '0px'}`,
         backgroundColor: `${
-          appScrollY < 40 ? 'rgba(0,0,0,0)' : 'rgb(0, 0, 0)'
+          appScrollY < 40 ? 'rgba(0,0,0,0)' : 'rgb(0, 0, 0, .64)'
         }`,
+        height: `${appScrollY > 40 ? '56' : '62'}`,
       }}
     >
       <div className='header-nav'>

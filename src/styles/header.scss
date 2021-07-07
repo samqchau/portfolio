@@ -11,6 +11,7 @@
   padding-left: 15px;
   padding-right: 25px;
   position: fixed;
+  transition: 0.1s all ease-in;
 }
 .header-nav {
   @include flex-row;

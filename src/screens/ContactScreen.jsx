@@ -5,9 +5,10 @@ const ContactScreen = () => {
   return (
     <>
       <div className='contactScreen'>
-        <p>Stay Connected</p>
-        <p>samqchau@gmail.com</p>
-        <p>+1 626 696 5465</p>
+        <h3>Stay Connected</h3>
+        <p className='call'>Orange County, California</p>
+        <p className='mail'>samqchau@gmail.com</p>
+        <p className='phone'>+1 (626) 696 5465</p>
       </div>
     </>
   );
