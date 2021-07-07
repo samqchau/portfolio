@@ -18,15 +18,33 @@ const Header = ({ windowX, appScrollY }) => {
     >
       <div className='header-nav'>
         <div className='header-nav-socials'>
-          <div className='icon-container' title='Dribble' alt='Dribble'>
-            <img className='icon' src='/pngs/dribble_64.png' alt='Github' />
-          </div>
-          <div className='icon-container' title='LinkedIn' alt='LinkedIn'>
-            <img className='icon' src='/pngs/linked_in_64.png' alt='LinkedIn' />
-          </div>
-          <div className='icon-container' title='Github' alt='Github'>
-            <img className='gh-icon' src='/pngs/gh_64.png' alt='Github' />
-          </div>
+          <a href='https://dribble.com/' target='_blank' rel='noreferrer'>
+            <div className='icon-container' title='Dribble' alt='Dribble'>
+              <img className='icon' src='/pngs/dribble_64.png' alt='Dribble' />
+            </div>
+          </a>
+          <a
+            href='https://www.linkedin.com/in/samqchau/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <div className='icon-container' title='LinkedIn' alt='LinkedIn'>
+              <img
+                className='icon'
+                src='/pngs/linked_in_64.png'
+                alt='LinkedIn'
+              />
+            </div>
+          </a>
+          <a
+            href='https://github.com/samqchau'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <div className='icon-container' title='Github' alt='Github'>
+              <img className='gh-icon' src='/pngs/gh_64.png' alt='Github' />
+            </div>
+          </a>
         </div>
         <div className='header-nav-items'>
           <div className='header-nav-item'>Home</div>
