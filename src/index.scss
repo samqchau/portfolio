@@ -104,6 +104,9 @@ hr {
   display: flex;
   justify-content: space-between;
 }
+.footer-content-left {
+  color: rgba(255, 255, 255, 0.432);
+}
 
 @media screen and (max-width: 800px) {
   .app {
