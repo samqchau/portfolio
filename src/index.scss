@@ -61,12 +61,12 @@ hr {
   @include flex-row;
   justify-content: center;
   margin-bottom: 36px;
-  height: 100%;
+  height: fit-content;
 }
 .app-main-content {
   width: 100%;
   max-width: 1250px;
-  height: 100%;
+  height: fit-content;
 }
 .screen-banner {
   width: 98%;
