@@ -29,6 +29,22 @@ html,
   letter-spacing: 1px;
 }
 
+hr {
+  margin: unset;
+  opacity: unset;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: black;
+  background: white;
+}
+
+::selection {
+  color: black;
+  background: rgb(255, 219, 219);
+}
+
 .app {
   background-image: url('./images/back2.jpg');
   background-size: cover;

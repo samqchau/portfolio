@@ -1,3 +1,4 @@
+@import './variables';
 .projects {
   width: 100%;
   display: flex;
@@ -12,9 +13,16 @@
 }
 .project-display {
   padding: 40px;
+  min-width: 400px;
   max-width: 1000px;
   width: 100%;
-  background-color: rgba(143, 143, 143, 0.493);
+}
+.project-display-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
 }
 .project-display-title {
   color: white;
@@ -29,18 +37,72 @@
   max-width: 425px;
   margin: 16px;
 }
+.project-display-content-header {
+  width: 100%;
+  max-width: 425px;
+}
 .project-display-link-container {
   display: flex;
 }
+.project-display-link {
+}
+.project-display-right > .container {
+  display: flex;
+  max-width: 425px;
+}
+.project-display-right > .container > .container > h6 {
+  margin-bottom: 0px !important;
+}
+.project-display-content-list {
+  margin-top: 4px;
+  padding-left: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.project-display-content-list > li {
+  list-style: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.project-display-right > .container > hr {
+  display: none;
+  background-color: rgb(156, 156, 156);
+  height: 1px;
+}
+
+@media screen and (max-width: 576px) {
+  .project-display-right > .container > hr {
+    display: block;
+  }
+  .project-display-right > .container > .container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .project-display-right > .container > .container > h6 {
+    width: 110px;
+    min-width: 110px;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  .project-display-content-list > li {
+    width: fit-content;
+    list-style: none;
+  }
+  .project-display-content-list {
+    margin-left: 20px;
+    padding-left: 16px;
+    border-left: 1px solid #ffc272;
+    width: fit-content;
+    min-width: 206px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .project-display-right > .container > .container {
+    display: flex;
+  }
+}
 
 @media screen and (max-width: 992px) {
-  .project-display-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 16px;
-  }
   .project-display-right {
     display: flex;
     justify-content: center;

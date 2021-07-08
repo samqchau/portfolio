@@ -11,8 +11,10 @@ const ProjectsScreen = () => {
         <Col xs={12} sm={12} md={12} lg={6} className='project-display-left'>
           <h1 className='project-display-title'>JobTrackr</h1>
           <div className='project-display-link-container'>
-            <div className='homeScreen-banner-resume-button'>GitHub Repo</div>
-            <div className='homeScreen-banner-resume-button'>Live Demo</div>
+            <div className='project-display-link'>
+              {`<`}Code{`/>`}
+            </div>
+            <div className='project-display-link'>Demo</div>
           </div>
           <div className='project-display-demo'>Video Goes Here</div>
         </Col>
@@ -25,7 +27,25 @@ const ProjectsScreen = () => {
             many applications, interviews and offers you’ve received in one
             view.
           </p>
-          <h6 className='project-display-content-header'>Technologies</h6>
+          <Row className='container'>
+            <Col className='container' xs={12} sm={6}>
+              <h6 className='project-display-list-title'>Technologies</h6>
+              <div className='project-display-content-list'>
+                <li>React</li>
+                <li>Redux</li>
+                <li>Node & Express</li>
+                <li>PostgreSQL</li>
+              </div>
+            </Col>
+            <Col className='container' xs={12} sm={6}>
+              <h6 className='project-display-list-title'>Key Features</h6>
+              <div className='project-display-content-list'>
+                <li>Drag & Drop</li>
+                <li>Data Persistence</li>
+                <li>Firebase Authentication</li>
+              </div>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </div>

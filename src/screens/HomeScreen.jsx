@@ -6,7 +6,7 @@ const HomeScreen = () => {
     <div className='homeScreen'>
       <div alt='Sam profile' className='homeScreen-profile-picture' />
       <div className='homeScreen-banner-right'>
-        <h1 className='homeScreen-banner-title'>Hi, I'm Samuel Chau</h1>
+        <h1 className='homeScreen-banner-title'>Hi, I'm Sam Chau</h1>
         <p className='homeScreen-banner-content'>
           a full-stack developer who specializes in using Javascript Libraries
           like React to build responsive websites and designs.
