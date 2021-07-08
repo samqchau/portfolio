@@ -22,7 +22,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 16px;
 }
 .project-display-title {
   color: white;
@@ -45,6 +44,9 @@
   display: flex;
 }
 .project-display-link {
+}
+.project-display-right {
+  margin-top: 16px !important;
 }
 .project-display-right > .container {
   display: flex;

@@ -41,13 +41,14 @@ hr {
 }
 
 ::selection {
-  color: black;
-  background: rgb(255, 219, 219);
+  color: white;
+  background: black;
 }
 
 .app {
   background-image: url('./images/back2.jpg');
   background-size: cover;
+  background-position: center;
   overflow-y: scroll;
 }
 .app::-webkit-scrollbar {
