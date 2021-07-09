@@ -13,7 +13,7 @@ const ProjectsScreen = () => {
         </div>
         <Col xs={12} sm={12} md={12} lg={6} className='project-display-left'>
           <h1 className='project-display-title'>JobTrackr</h1>
-          <div className='project-display-demo'>Video Goes Here</div>
+          <div className='project-display-demo'></div>
           <div className='project-display-link-container'>
             <div className='project-display-link'>Code</div>
             <div className='project-display-link'>Demo</div>
@@ -53,7 +53,7 @@ const ProjectsScreen = () => {
       <Row className='project-display'>
         <Col xs={12} sm={12} md={12} lg={6} className='project-display-left'>
           <h1 className='project-display-title'>ProShop</h1>
-          <div className='project-display-demo'>Video Goes Here</div>
+          <div className='project-display-demo'></div>
           <div className='project-display-link-container'>
             <div className='project-display-link'>Code</div>
             <div className='project-display-link'>Demo</div>
