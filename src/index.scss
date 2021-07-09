@@ -52,10 +52,14 @@ hr {
   overflow-y: scroll;
 }
 .app::-webkit-scrollbar {
-  width: 15px;
-  background-color: rgba(0, 0, 0, 0.432);
+  width: 6px;
   border-radius: 5px;
-  border: 1px solid white;
+}
+.app::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
 }
 .app-main {
   @include flex-row;
