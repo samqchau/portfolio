@@ -1,0 +1,31 @@
+.top-button {
+  height: 36px;
+  width: 36px;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.132);
+  transition: all 0.2s linear;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+  border-radius: 5px;
+  right: 6px;
+}
+
+.top-button > i {
+  color: rgb(189, 189, 189);
+}
+
+.top-button:hover {
+  background-color: rgba(255, 255, 255, 0.432);
+}
+
+@media screen and (max-width: 576px) {
+  .top-button {
+    top: unset;
+    bottom: 0px;
+    right: 6px;
+    border-radius: unset;
+  }
+}

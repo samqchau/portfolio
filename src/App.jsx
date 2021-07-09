@@ -4,6 +4,7 @@ import HomeScreen from './screens/HomeScreen';
 import ContactScreen from './screens/ContactScreen';
 import ProjectsScreen from './screens/ProjectsScreen';
 import Footer from './components/Footer.jsx';
+import ReturnToTop from './components/ReturnToTop.jsx';
 
 function App() {
   const appRef = useRef();
@@ -32,11 +33,12 @@ function App() {
       <div className='app' ref={appRef} onScroll={handleAppScroll}>
         <div className='app-main'>
           <div className='app-main-content'>
+            <ReturnToTop appRef={appRef.current} />
             <div className='left-banner screen-banner'>
               <HomeScreen />
               <ProjectsScreen />
               <ContactScreen />
-              <Footer/>
+              <Footer />
             </div>
           </div>
         </div>
