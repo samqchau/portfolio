@@ -92,26 +92,6 @@ hr {
   border-top: 1px solid rgba(255, 255, 255, 0.432);
   border-radius: 0px 30px 3px 30px;
 }
-.screen-footer {
-  display: flex;
-  justify-content: center;
-  height: 164px;
-  width: 100%;
-  padding: 70px 0 61px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.432);
-}
-.screen-footer-content {
-  width: 100%;
-  max-width: 1200px;
-  padding-left: 30px;
-  padding-right: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-.footer-content-left {
-  color: rgba(255, 255, 255, 0.432);
-}
-
 @media screen and (max-width: 800px) {
   .app {
     padding-top: 74px;
