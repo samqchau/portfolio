@@ -62,11 +62,10 @@ const ProjectsScreen = () => {
         <Col xs={12} sm={12} md={12} lg={6} className='project-display-right'>
           <h6 className='project-display-content-header'>Description</h6>
           <p className='project-display-content'>
-            JobTrackr is a free, secure, and easily accessible web app that
-            helps users track and organize applications during the job hunt.
-            Visualize the state of your job search in a single board. See how
-            many applications, interviews and offers you’ve received in one
-            view.
+            ProShop is a faux e-commerce site streamlined to give users the best
+            shopping experience. Stripe and PayPal integration allows users and
+            guests to make purchases. Admins have full control of all purchases
+            and orders through protected views.
           </p>
           <Row className='container'>
             <Col className='container' xs={12} sm={6}>
@@ -75,15 +74,15 @@ const ProjectsScreen = () => {
                 <li>React</li>
                 <li>Redux</li>
                 <li>Node & Express</li>
-                <li>PostgreSQL</li>
+                <li>Mongoose / MongoDB</li>
               </div>
             </Col>
             <Col className='container' xs={12} sm={6}>
               <h6 className='project-display-list-title'>Key Features</h6>
               <div className='project-display-content-list'>
-                <li>Drag & Drop</li>
-                <li>Data Persistence</li>
-                <li>Firebase Authentication</li>
+                <li>Stripe & PayPal</li>
+                <li>Custom Cart System</li>
+                <li>User / Admin Roles</li>
               </div>
             </Col>
           </Row>

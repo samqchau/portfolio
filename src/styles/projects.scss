@@ -48,6 +48,7 @@
 .project-display-title {
   color: white;
   height: fit-content;
+  font-size: 24px;
 }
 .project-display-demo {
   height: 300px;
@@ -62,7 +63,7 @@
 .project-display-content-header {
   width: 100%;
   max-width: 425px;
-  margin-bottom: 0px !important;
+  margin-bottom: 0px;
 }
 .project-display-link-container {
   display: flex;
@@ -97,7 +98,7 @@
     right: -40px;
     width: 40px;
     height: 100%;
-    background-color: rgba(white, 0.3);
+    background-color: rgba(197, 197, 197, 20%);
     transition: all 0.2s linear 0s, background-color 0.15s 0.15s ease-out;
     text-align: center;
     padding-top: 5px;
@@ -109,7 +110,6 @@
     &:before {
       right: 0;
       text-indent: 0px;
-      background-color: rgba(255, 125, 125, 0.479);
     }
   }
 }
@@ -153,9 +153,13 @@
   }
   .section-title-container h3 {
     font-size: 26px;
+    margin-bottom: 16px;
   }
   .project-display-content {
     margin: 0px 0px 16px 0px;
+  }
+  .project-display-content-header {
+    margin-bottom: 8px;
   }
 }
 @media screen and (max-width: 576px) {
