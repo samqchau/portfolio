@@ -4,7 +4,7 @@ import '../styles/contactScreen.scss';
 const ContactScreen = () => {
   return (
     <>
-      <div className='contactScreen'>
+      <div className='contactScreen' id='contact'>
         <h3>Stay Connected</h3>
         <p className='call'>Orange County, California</p>
         <p className='mail'>samqchau@gmail.com</p>

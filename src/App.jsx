@@ -5,6 +5,7 @@ import ContactScreen from './screens/ContactScreen';
 import ProjectsScreen from './screens/ProjectsScreen';
 import Footer from './components/Footer.jsx';
 import ReturnToTop from './components/ReturnToTop.jsx';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   const appRef = useRef();
@@ -24,7 +25,7 @@ function App() {
   };
 
   return (
-    <>
+    <Router>
       <Header
         windowX={windowX}
         appScrollY={appScrollYPos}
@@ -43,7 +44,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </Router>
   );
 }
 

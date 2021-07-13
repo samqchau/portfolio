@@ -1,7 +1,16 @@
 import React from 'react';
 import '../styles/header.scss';
+import { useHistory } from 'react-router';
 
-const Header = ({ windowX, appScrollY }) => {
+const Header = ({ windowX, appScrollY, appRef }) => {
+  const history = useHistory();
+
+  const homeHandler = (e) => {
+    e.stopPropagation();
+    appRef.scrollTop = 0;
+    history.push('/');
+  };
+
   return (
     <div
       className='header'
@@ -47,10 +56,29 @@ const Header = ({ windowX, appScrollY }) => {
           </a>
         </div>
         <div className='header-nav-items'>
-          <div className='header-nav-item'>Home</div>
-          <div className='header-nav-item'>About</div>
-          <div className='header-nav-item'>Projects</div>
-          <div className='header-nav-item'>Contact</div>
+          <div className='header-nav-item' onClick={homeHandler}>
+            Home
+          </div>
+          <a
+            href='#projects'
+            onClick={() => {
+              setTimeout(() => {
+                history.push('/');
+              }, 0);
+            }}
+          >
+            <div className='header-nav-item'>Projects</div>
+          </a>
+          <a
+            href='/#contact'
+            onClick={() => {
+              setTimeout(() => {
+                history.push('/');
+              }, 0);
+            }}
+          >
+            <div className='header-nav-item'>Contact</div>
+          </a>
         </div>
       </div>
     </div>

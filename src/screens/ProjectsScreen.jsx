@@ -2,9 +2,9 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import '../styles/projects.scss';
 
-const ProjectsScreen = () => {
+const ProjectsScreen = ({ projectRef }) => {
   return (
-    <div className='projects'>
+    <div className='projects' id='projects'>
       <Row className='project-display'>
         <div className='section-title-container'>
           <div className='section-title-hr'></div>
