@@ -11,7 +11,9 @@ const ReturnToTop = ({ appRef }) => {
       className='top-button'
       title='Return to top'
       onClick={handleClick}
-      style={{ opacity: `${appRef && appRef.scrollTop === 0 ? '0%' : '100%'}` }}
+      style={{
+        display: `${appRef && appRef.scrollTop === 0 ? 'none' : 'flex'}`,
+      }}
     >
       <i className='fas fa-angle-up'></i>
     </div>
