@@ -1,9 +1,8 @@
 import React from 'react';
 import '../styles/header.scss';
-import { useHistory, useLocation } from 'react-router';
+import { useLocation } from 'react-router';
 
 const Header = ({ windowX, appScrollY, appRef }) => {
-  const history = useHistory();
   const location = useLocation();
   let pathname = location.pathname;
   pathname = pathname.slice(1);
@@ -11,7 +10,6 @@ const Header = ({ windowX, appScrollY, appRef }) => {
   const homeHandler = (e) => {
     e.stopPropagation();
     appRef.scrollTop = 0;
-    history.push('/');
   };
 
   return (
@@ -67,14 +65,7 @@ const Header = ({ windowX, appScrollY, appRef }) => {
           >
             Home
           </div>
-          <a
-            href='#projects'
-            onClick={() => {
-              setTimeout(() => {
-                history.push('/projects');
-              }, 0);
-            }}
-          >
+          <a href='#projects'>
             <div
               className={`header-nav-item ${
                 pathname === 'projects' ? 'header-nav-item-active' : ''
@@ -83,14 +74,7 @@ const Header = ({ windowX, appScrollY, appRef }) => {
               Projects
             </div>
           </a>
-          <a
-            href='#contact'
-            onClick={() => {
-              setTimeout(() => {
-                history.push('/contact');
-              }, 0);
-            }}
-          >
+          <a href='#contact'>
             <div
               className={`header-nav-item ${
                 pathname === 'contact' ? 'header-nav-item-active' : ''
