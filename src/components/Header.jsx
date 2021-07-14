@@ -1,9 +1,12 @@
 import React from 'react';
 import '../styles/header.scss';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 
 const Header = ({ windowX, appScrollY, appRef }) => {
   const history = useHistory();
+  const location = useLocation();
+  let pathname = location.pathname;
+  pathname = pathname.slice(1);
 
   const homeHandler = (e) => {
     e.stopPropagation();
@@ -55,29 +58,46 @@ const Header = ({ windowX, appScrollY, appRef }) => {
             </div>
           </a>
         </div>
-        <div className='header-nav-items'>
-          <div className='header-nav-item' onClick={homeHandler}>
+        <div className={`header-nav-items`}>
+          <div
+            className={`header-nav-item ${
+              pathname === '' ? 'header-nav-item-active' : ''
+            }`}
+            onClick={homeHandler}
+          >
             Home
           </div>
           <a
             href='#projects'
             onClick={() => {
               setTimeout(() => {
-                history.push('/');
+                history.push('/projects');
               }, 0);
             }}
           >
-            <div className='header-nav-item'>Projects</div>
+            <div
+              className={`header-nav-item ${
+                pathname === 'projects' ? 'header-nav-item-active' : ''
+              }`}
+            >
+              Projects
+            </div>
           </a>
           <a
-            href='/#contact'
+            href='#contact'
             onClick={() => {
               setTimeout(() => {
-                history.push('/');
+                history.push('/contact');
               }, 0);
             }}
           >
-            <div className='header-nav-item'>Contact</div>
+            <div
+              className={`header-nav-item ${
+                pathname === 'contact' ? 'header-nav-item-active' : ''
+              }`}
+            >
+              Contact
+            </div>
           </a>
         </div>
       </div>
