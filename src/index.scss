@@ -23,7 +23,7 @@ body,
 html,
 .app,
 #root {
-  height: 100%;
+  height: fit-content;
   width: 100%;
   color: white;
   letter-spacing: 1px;
@@ -54,23 +54,35 @@ a {
   background: black;
 }
 
-.app {
-  background-image: url('./images/back2.jpg');
-  background-size: cover;
-  background-position: center;
+html {
+  overflow: scroll;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: overlay;
   scroll-behavior: smooth;
 }
-.app::-webkit-scrollbar {
+html::-webkit-scrollbar {
   width: 6px;
   border-radius: 5px;
 }
-.app::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   height: 10px;
   width: 10px;
+}
+
+.background {
+  background-image: url('./images/back2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -10000;
+}
+
+.app {
+  height: fit-content;
 }
 .app-main {
   @include flex-row;

@@ -1,17 +1,96 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import '../styles/projects.scss';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const ProjectsScreen = ({ projectRef }) => {
+gsap.registerPlugin(ScrollTrigger);
+
+const ProjectsScreen = () => {
+  const sectionHeader = useRef(null);
+  const project1Demo = useRef(null);
+  const project2Demo = useRef(null);
+  const project1Desc = useRef(null);
+  const project2Desc = useRef(null);
+
+  useEffect(() => {
+    gsap.to(sectionHeader.current, {
+      scrollTrigger: {
+        trigger: sectionHeader.current,
+        start: 'top 70%',
+        toggleActions: 'play none none none',
+      },
+      duration: 0.3,
+      opacity: '100%',
+      ease: 'none',
+      top: '0px',
+    });
+
+    gsap.to(project1Demo.current, {
+      scrollTrigger: {
+        trigger: project1Demo.current,
+        start: 'top 70%',
+        toggleActions: 'play none none none',
+      },
+      duration: 0.3,
+      opacity: '100%',
+      ease: 'none',
+      top: '0px',
+    });
+
+    gsap.to(project1Desc.current, {
+      scrollTrigger: {
+        trigger: project1Desc.current,
+        start: 'top 70%',
+        toggleActions: 'play none none none',
+      },
+      duration: 0.3,
+      opacity: '100%',
+      ease: 'none',
+      top: '0px',
+    });
+
+    gsap.to(project2Demo.current, {
+      scrollTrigger: {
+        trigger: project2Demo.current,
+        start: 'top 70%',
+        toggleActions: 'play none none none',
+      },
+      duration: 0.3,
+      opacity: '100%',
+      ease: 'none',
+      top: '0px',
+    });
+
+    gsap.to(project2Desc.current, {
+      scrollTrigger: {
+        trigger: project2Desc.current,
+        start: 'top 70%',
+        toggleActions: 'play none none none',
+      },
+      duration: 0.3,
+      opacity: '100%',
+      ease: 'none',
+      top: '0px',
+    });
+  }, []);
+
   return (
     <div className='projects' id='projects'>
       <Row className='project-display'>
-        <div className='section-title-container'>
+        <div className='section-title-container' ref={sectionHeader}>
           <div className='section-title-hr'></div>
           <h3 className='section-title'>Projects</h3>
           <div className='section-title-hr'></div>
         </div>
-        <Col xs={12} sm={12} md={12} lg={6} className='project-display-left'>
+        <Col
+          xs={12}
+          sm={12}
+          md={12}
+          lg={6}
+          className='project-display-left'
+          ref={project1Demo}
+        >
           <h1 className='project-display-title'>JobTrackr</h1>
           <div className='project-display-demo'></div>
           <div className='project-display-link-container'>
@@ -19,7 +98,14 @@ const ProjectsScreen = ({ projectRef }) => {
             <div className='project-display-link'>Demo</div>
           </div>
         </Col>
-        <Col xs={12} sm={12} md={12} lg={6} className='project-display-right'>
+        <Col
+          xs={12}
+          sm={12}
+          md={12}
+          lg={6}
+          className='project-display-right'
+          ref={project1Desc}
+        >
           <h6 className='project-display-content-header'>Description</h6>
           <p className='project-display-content'>
             JobTrackr is a free, secure, and easily accessible web app that
@@ -51,7 +137,14 @@ const ProjectsScreen = ({ projectRef }) => {
       </Row>
 
       <Row className='project-display'>
-        <Col xs={12} sm={12} md={12} lg={6} className='project-display-left'>
+        <Col
+          xs={12}
+          sm={12}
+          md={12}
+          lg={6}
+          className='project-display-left'
+          ref={project2Demo}
+        >
           <h1 className='project-display-title'>ProShop</h1>
           <div className='project-display-demo'></div>
           <div className='project-display-link-container'>
@@ -59,7 +152,14 @@ const ProjectsScreen = ({ projectRef }) => {
             <div className='project-display-link'>Demo</div>
           </div>
         </Col>
-        <Col xs={12} sm={12} md={12} lg={6} className='project-display-right'>
+        <Col
+          xs={12}
+          sm={12}
+          md={12}
+          lg={6}
+          className='project-display-right'
+          ref={project2Desc}
+        >
           <h6 className='project-display-content-header'>Description</h6>
           <p className='project-display-content'>
             ProShop is a faux e-commerce site streamlined to give users the best

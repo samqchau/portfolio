@@ -7,15 +7,21 @@ import Footer from './components/Footer.jsx';
 import ReturnToTop from './components/ReturnToTop.jsx';
 import { useHistory } from 'react-router';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 function App() {
   const history = useHistory();
-  const appRef = useRef();
-  const bannerRef = useRef();
+  const appRef = useRef(null);
+  const bannerRef = useRef(null);
+  const htmlRef = useRef(null);
+
   const [appScrollYPos, setAppScrollYPos] = useState(0);
   const [windowX, setWindowX] = useState(window.innerWidth);
   const [childHeights, setChildHeights] = useState([]);
 
-  let isScrolling;
+  let isScrolling = useRef(null);
 
   useEffect(() => {
     if (appScrollYPos < childHeights[0]) {
@@ -32,8 +38,7 @@ function App() {
 
   useEffect(() => {
     function handleResize() {
-      setWindowX(appRef.current.offsetWidth);
-
+      setWindowX(htmlRef.current.offsetWidth);
       let children = bannerRef.current.children;
       let heights = [];
       children = [...children];
@@ -46,14 +51,20 @@ function App() {
     window.addEventListener('resize', handleResize);
   }, [windowX]);
 
-  const handleAppScroll = (e) => {
-    clearTimeout(isScrolling);
-    isScrolling = setTimeout(() => {
-      setAppScrollYPos(appRef.current.scrollTop);
-    }, 5);
-  };
-
   useEffect(() => {
+    const handleAppScroll = (e) => {
+      clearTimeout(isScrolling.current);
+      isScrolling.current = setTimeout(() => {
+        setAppScrollYPos(htmlRef.current.scrollTop);
+      }, 5);
+
+      console.log('hello');
+    };
+
+    let html = document.getElementsByTagName('html')[0];
+    window.addEventListener('scroll', handleAppScroll);
+    htmlRef.current = html;
+
     let children = bannerRef.current.children;
     let heights = [];
     children = [...children];
@@ -68,12 +79,13 @@ function App() {
       <Header
         windowX={windowX}
         appScrollY={appScrollYPos}
-        appRef={appRef.current}
+        appRef={htmlRef.current}
       />
-      <div className='app' ref={appRef} onScroll={handleAppScroll}>
+      <div className='background'></div>
+      <div className='app' ref={appRef}>
         <div className='app-main'>
           <div className='app-main-content'>
-            <ReturnToTop appRef={appRef.current} />
+            <ReturnToTop appRef={htmlRef.current} />
             <div className='left-banner screen-banner' ref={bannerRef}>
               <HomeScreen />
               <ProjectsScreen />
