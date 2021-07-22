@@ -14,10 +14,11 @@ const ProjectsScreen = () => {
   const project2Desc = useRef(null);
 
   useEffect(() => {
+    let width = window.innerWidth;
     gsap.to(sectionHeader.current, {
       scrollTrigger: {
         trigger: sectionHeader.current,
-        start: 'top 60%',
+        start: `top ${width > 800 ? '60%' : '82%'}`,
         toggleActions: 'play none none none',
       },
       duration: 0.3,

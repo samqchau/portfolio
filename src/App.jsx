@@ -5,6 +5,7 @@ import ContactScreen from './screens/ContactScreen';
 import ProjectsScreen from './screens/ProjectsScreen';
 import Footer from './components/Footer.jsx';
 import ReturnToTop from './components/ReturnToTop.jsx';
+import ScrollDownIndicator from './components/ScrollDownIndicator';
 import { useHistory } from 'react-router';
 
 import { gsap } from 'gsap';
@@ -81,6 +82,7 @@ function App() {
         appScrollY={appScrollYPos}
         appRef={htmlRef.current}
       />
+      <ScrollDownIndicator />
       <div className='background'></div>
       <div className='app' ref={appRef}>
         <div className='app-main'>
