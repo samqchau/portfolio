@@ -28,10 +28,10 @@ function App() {
       history.replace('/');
     } else if (
       appScrollYPos > childHeights[0] &&
-      appScrollYPos < childHeights[1] + childHeights[0]
+      appScrollYPos < childHeights[1]
     ) {
       history.replace('/projects');
-    } else {
+    } else if (appScrollYPos > childHeights[1]) {
       history.replace('/contact');
     }
   }, [appScrollYPos, childHeights, history]);
@@ -45,6 +45,8 @@ function App() {
       children.forEach((child, i) => {
         if (i < 3) heights.push(child.clientHeight);
       });
+      heights[1] = heights[1] + heights[0];
+      heights[2] = heights[1] + heights[0] + heights[2];
       setChildHeights(heights);
     }
 
@@ -57,8 +59,6 @@ function App() {
       isScrolling.current = setTimeout(() => {
         setAppScrollYPos(htmlRef.current.scrollTop);
       }, 5);
-
-      console.log('hello');
     };
 
     let html = document.getElementsByTagName('html')[0];
