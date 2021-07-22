@@ -107,7 +107,8 @@ html::-webkit-scrollbar-thumb {
 .left-banner {
   margin-top: 124px;
   border-left: 1px solid rgba(255, 255, 255, 0.432);
-  border-radius: 30px 0px 30px 3px;
+  border-radius: 30px;
+  border-right: 1px solid rgba(122, 122, 122, 0.3);
 }
 .right-banner {
   border-right: 1px solid rgba(255, 255, 255, 0.432);

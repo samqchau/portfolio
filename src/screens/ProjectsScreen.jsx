@@ -93,7 +93,14 @@ const ProjectsScreen = () => {
           <h1 className='project-display-title'>JobTrackr</h1>
           <div className='project-display-demo'></div>
           <div className='project-display-link-container'>
-            <div className='project-display-link'>Code</div>
+            <a
+              href='https://github.com/samqchau/job-tracker'
+              target='_blank'
+              rel='noreferrer'
+              className='project-display-link'
+            >
+              Code
+            </a>
             <div className='project-display-link'>Demo</div>
           </div>
         </Col>
