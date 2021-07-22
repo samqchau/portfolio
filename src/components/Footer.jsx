@@ -27,9 +27,27 @@ const Footer = () => {
       <div className='screen-footer-content'>
         <div className='footer-content-left'>Designed By: Samuel Chau</div>
         <div className='footer-content-right'>
-          <i className='footer-social-icon fab fa-instagram'></i>
-          <i className='footer-social-icon fab fa-facebook-square'></i>
-          <i className='footer-social-icon fab fa-twitter'></i>
+          <a
+            href='https://instagram.com/chau_now/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <i className='footer-social-icon fab fa-instagram'></i>
+          </a>
+          <a
+            href='https://facebook.com/samuel.chau1'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <i className='footer-social-icon fab fa-facebook-square'></i>
+          </a>
+          <a
+            href='https://twitter.com/samqchau'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <i className='footer-social-icon fab fa-twitter'></i>
+          </a>
         </div>
       </div>
     </div>

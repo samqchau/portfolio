@@ -17,13 +17,12 @@ const ProjectsScreen = () => {
     gsap.to(sectionHeader.current, {
       scrollTrigger: {
         trigger: sectionHeader.current,
-        start: 'top 70%',
+        start: 'top 60%',
         toggleActions: 'play none none none',
       },
       duration: 0.3,
       opacity: '100%',
       ease: 'none',
-      top: '0px',
     });
 
     gsap.to(project1Demo.current, {
