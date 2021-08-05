@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useLayoutEffect } from 'react';
 import Header from './components/Header';
 import HomeScreen from './screens/HomeScreen';
 import ContactScreen from './screens/ContactScreen';
@@ -24,7 +24,20 @@ function App() {
 
   let isScrolling = useRef(null);
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   if (appScrollYPos < childHeights[0]) {
+  //     history.replace('/');
+  //   } else if (
+  //     appScrollYPos > childHeights[0] &&
+  //     appScrollYPos < childHeights[1]
+  //   ) {
+  //     history.replace('/projects');
+  //   } else if (appScrollYPos > childHeights[1]) {
+  //     history.replace('/contact');
+  //   }
+  // }, [appScrollYPos, childHeights, history]);
+
+  useLayoutEffect(() => {
     if (appScrollYPos < childHeights[0]) {
       history.replace('/');
     } else if (
@@ -52,7 +65,7 @@ function App() {
     }
 
     window.addEventListener('resize', handleResize);
-  }, [windowX]);
+  }, []);
 
   useEffect(() => {
     const handleAppScroll = (e) => {
