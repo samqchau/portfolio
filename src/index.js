@@ -1,3 +1,7 @@
+/*
+git subtree push --prefix dist origin gh-pages
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';

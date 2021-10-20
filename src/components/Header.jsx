@@ -36,7 +36,7 @@ const Header = ({ windowX, appScrollY, appRef }) => {
             <div className='icon-container' title='LinkedIn' alt='LinkedIn'>
               <img
                 className='icon'
-                src='/pngs/linked_in_64.png'
+                src='pngs/linked_in_64.png'
                 alt='LinkedIn'
               />
             </div>
@@ -47,7 +47,7 @@ const Header = ({ windowX, appScrollY, appRef }) => {
             rel='noreferrer'
           >
             <div className='icon-container' title='Github' alt='Github'>
-              <img className='gh-icon' src='/pngs/gh_64.png' alt='Github' />
+              <img className='gh-icon' src='pngs/gh_64.png' alt='Github' />
             </div>
           </a>
           <a
@@ -56,7 +56,7 @@ const Header = ({ windowX, appScrollY, appRef }) => {
             rel='noreferrer'
           >
             <div className='icon-container' title='Codepen' alt='Codepen'>
-              <img className='icon' src='/pngs/codepen.png' alt='Codepen' />
+              <img className='icon' src='pngs/codepen.png' alt='Codepen' />
             </div>
           </a>
         </div>
