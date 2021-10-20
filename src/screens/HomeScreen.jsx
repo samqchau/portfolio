@@ -27,10 +27,15 @@ const HomeScreen = () => {
       <div className='homeScreen-banner-right' ref={contentRef}>
         <h1 className='homeScreen-banner-title'>Hi, I'm Sam Chau</h1>
         <p className='homeScreen-banner-content'>
-          a full-stack developer who specializes in using Javascript Libraries
-          like React to build responsive websites and designs.
+          a full-stack developer who specializes in using Javascript frameworks
+          like React to build responsive and stateful websites.
         </p>
-        <div className='homeScreen-banner-resume-button'>Download Resume</div>
+        <a
+          href='https://github.com/samqchau/portfolio-v1.0.0/blob/gh-pages/files/resume_sam_chau.pdf?raw=true'
+          download='sam_chau_resume'
+        >
+          <div className='homeScreen-banner-resume-button'>Download Resume</div>
+        </a>
       </div>
     </div>
   );
