@@ -1,31 +1,37 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import '../styles/header.scss';
 import { useLocation } from 'react-router';
 
-const Header = ({ windowX, appScrollY, appRef }) => {
+const Header = ({ htmlRef }) => {
+  const headerRef = useRef(null);
   const location = useLocation();
   let pathname = location.pathname;
   pathname = pathname.slice(1);
 
   const homeHandler = (e) => {
     e.stopPropagation();
-    appRef.scrollTop = 0;
+    htmlRef.current.scrollTop = 0;
+    window.history.replaceState({}, '', window.location.origin);
   };
 
+  useEffect(() => {
+    gsap.to(headerRef.current, {
+      scrollTrigger: {
+        trigger: headerRef.current,
+        start: 'bottom 36px',
+        toggleActions: 'play none reverse none',
+      },
+      duration: 0.15,
+      backgroundColor: 'rgba(0,0,0,.64)',
+      paddingTop: '6px',
+      height: '56px',
+      ease: 'slow',
+    });
+  }, []);
+
   return (
-    <div
-      className='header'
-      style={{
-        paddingTop: `${
-          windowX > 800 && appScrollY < 40 ? `${36 - appScrollY}px` : '6px'
-        }`,
-        marginTop: `${appScrollY < 40 && windowX < 800 ? '6px' : '0px'}`,
-        backgroundColor: `${
-          appScrollY < 40 ? 'rgba(0,0,0,0)' : 'rgb(0, 0, 0, .64)'
-        }`,
-        height: `${appScrollY > 40 ? '56' : '62'}`,
-      }}
-    >
+    <div className='header' ref={headerRef}>
       <div className='header-nav'>
         <div className='header-nav-socials'>
           <a

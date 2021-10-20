@@ -275,3 +275,10 @@
     transform: scale(1, 0);
   }
 }
+
+@media screen and (max-width: 800px) {
+  #scroll-down {
+    right: -100px;
+    transform: unset;
+  }
+}

@@ -17,6 +17,8 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  user-select: none;
+  overscroll-behavior-x: none;
 }
 
 html {
@@ -108,7 +110,7 @@ html::-webkit-scrollbar-thumb {
   margin: auto;
 }
 .left-banner {
-  margin-top: 124px;
+  margin-top: 84px;
   border-left: 1px solid rgba(255, 255, 255, 0.432);
   border-radius: 30px;
   border-right: 1px solid rgba(122, 122, 122, 0.3);
