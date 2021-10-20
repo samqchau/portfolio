@@ -23,7 +23,7 @@ function App() {
     <>
       <Header htmlRef={htmlRef} />
       <ScrollDownIndicator />
-      <div className='background'></div>
+      <img className='background' src='pngs/back2.jpg' alt='' />
       <div className='app'>
         <div className='app-main'>
           <div className='app-main-content'>

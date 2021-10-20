@@ -77,13 +77,13 @@ html::-webkit-scrollbar-thumb {
   width: 10px;
 }
 .background {
-  background-image: url('https://github.com/samqchau/portfolio-v1.0.0/blob/gh-pages/pngs/back2.jpg?raw=true');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
+  bottom: 0px;
   position: fixed;
   z-index: -10000;
+  min-height: 780px;
+  min-width: 1400px;
+  height: 100%;
+  width: 100%;
 }
 
 .app {
