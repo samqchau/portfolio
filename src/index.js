@@ -1,5 +1,6 @@
 /*
 git subtree push --prefix dist origin gh-pages
+git remote add -f tpope-vim-surround https://bitbucket.org/vim-plugins-mirror/vim-surround.git
 */
 
 import React from 'react';
@@ -10,7 +11,7 @@ import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename='/portfolio-v1.0.0'>
       <App />
     </Router>
   </React.StrictMode>,
