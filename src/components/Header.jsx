@@ -7,7 +7,11 @@ const Header = ({ htmlRef }) => {
   const homeHandler = (e) => {
     e.stopPropagation();
     htmlRef.current.scrollTop = 0;
-    window.history.replaceState({}, '', window.location.origin);
+    window.history.replaceState(
+      {},
+      '',
+      `${window.location.origin}/portfolio-v1.0.0/`
+    );
   };
 
   useEffect(() => {
