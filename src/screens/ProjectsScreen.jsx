@@ -1,10 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, Suspense } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import '../styles/projects.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 gsap.registerPlugin(ScrollTrigger);
+
+const LazyJobTrackerDemo = React.lazy(() =>
+  import('../components/lazy/JobTrackerDemo')
+);
 
 const ProjectsScreen = () => {
   const sectionHeader = useRef(null);
@@ -92,7 +95,10 @@ const ProjectsScreen = () => {
           ref={project1Demo}
         >
           <h1 className='project-display-title'>JobTrackr</h1>
-          <div className='project-display-demo'></div>
+          <Suspense fallback={<div className='project-display-demo'></div>}>
+            <LazyJobTrackerDemo />
+          </Suspense>
+
           <div className='project-display-link-container'>
             <a
               href='https://github.com/samqchau/job-tracker'
