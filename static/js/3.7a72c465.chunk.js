@@ -1,2 +1,0 @@
-(this.webpackJsonpportfolio=this.webpackJsonpportfolio||[]).push([[3],{40:function(t,o,p){"use strict";p.r(o);p(1);var e=p(0),r={marginBottom:"25px"};o.default=function(){return Object(e.jsx)("video",{style:r,height:"300",autoPlay:!0,loop:!0,muted:!0,src:"mp4/jobtracker-demo-final.mp4",poster:"pngs/jt-poster.png"})}}}]);
-//# sourceMappingURL=3.7a72c465.chunk.js.map
