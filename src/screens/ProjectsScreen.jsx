@@ -26,7 +26,7 @@ const ProjectsScreen = () => {
       scrollTrigger: {
         trigger: sectionHeader.current,
         start: `top ${width > 800 ? '60%' : '82%'}`,
-        toggleActions: 'play none none none',
+        toggleActions: 'play none none reverse',
       },
       duration: 0.3,
       opacity: '100%',
@@ -37,7 +37,7 @@ const ProjectsScreen = () => {
       scrollTrigger: {
         trigger: projectsRef.current,
         start: 'top 60%',
-        toggleActions: 'play reverse play reverse',
+        toggleActions: 'play none none reverse',
         end: 'top',
       },
       duration: 0.2,
@@ -50,7 +50,7 @@ const ProjectsScreen = () => {
       scrollTrigger: {
         trigger: project1Demo.current,
         start: 'top 70%',
-        toggleActions: 'play none none none',
+        toggleActions: 'play none none reverse',
       },
       duration: 0.3,
       opacity: '100%',
@@ -62,7 +62,7 @@ const ProjectsScreen = () => {
       scrollTrigger: {
         trigger: project1Desc.current,
         start: 'top 70%',
-        toggleActions: 'play none none none',
+        toggleActions: 'play none none reverse',
       },
       duration: 0.3,
       opacity: '100%',
@@ -74,7 +74,7 @@ const ProjectsScreen = () => {
       scrollTrigger: {
         trigger: project2Demo.current,
         start: 'top 70%',
-        toggleActions: 'play none none none',
+        toggleActions: 'play none none reverse',
       },
       duration: 0.3,
       opacity: '100%',
@@ -86,7 +86,7 @@ const ProjectsScreen = () => {
       scrollTrigger: {
         trigger: project2Desc.current,
         start: 'top 70%',
-        toggleActions: 'play none none none',
+        toggleActions: 'play none none reverse',
       },
       duration: 0.3,
       opacity: '100%',

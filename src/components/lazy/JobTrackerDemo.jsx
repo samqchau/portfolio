@@ -15,7 +15,6 @@ const JobTrackerDemo = () => {
       autoPlay
       loop
       muted
-      controls
       onLoad={() => {
         videoRef.current.playbackRate = 1.8;
       }}
