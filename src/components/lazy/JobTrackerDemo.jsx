@@ -20,7 +20,7 @@ const JobTrackerDemo = () => {
       }}
       controlsList='nodownload disablepictureinpicture'
       src='mp4/jobtracker-demo-final.mp4'
-      poster='pngs/jt-poster.png'
+      poster='pngs/jt-poster.jpg'
     ></video>
   );
 };
