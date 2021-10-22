@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 const JobTrackerDemo = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    videoRef.current.playbackRate = 1.5;
+  }, []);
+
   return (
     <video
+      ref={videoRef}
       style={demoStyle}
       height='300'
       autoPlay
       loop
       muted
       controls
+      onLoad={() => {
+        videoRef.current.playbackRate = 1.8;
+      }}
+      controlsList='nodownload disablepictureinpicture'
       src='mp4/jobtracker-demo-final.mp4'
       poster='pngs/jt-poster.png'
     ></video>
