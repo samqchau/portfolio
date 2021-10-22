@@ -92,13 +92,7 @@ const ProjectsScreen = () => {
           ref={project1Demo}
         >
           <h1 className='project-display-title'>JobTrackr</h1>
-          {/* 
-          <Suspense fallback={<div className='project-display-demo'></div>}>
-            <LazyJobTrackerDemo />
-          </Suspense>
-          */}
           <JobTrackerDemo />
-
           <div className='project-display-link-container'>
             <a
               href='https://github.com/samqchau/job-tracker'

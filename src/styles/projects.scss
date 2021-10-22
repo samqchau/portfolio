@@ -39,7 +39,6 @@
 .project-display {
   padding: 40px;
   min-width: 400px;
-  max-width: 1000px;
   width: 100%;
 }
 .project-display-left {
@@ -65,6 +64,7 @@
 }
 .project-display-content {
   max-width: 425px;
+  min-width: 394px;
   margin: 16px;
 }
 .project-display-content-header {
@@ -127,6 +127,7 @@
   align-items: center;
   position: relative;
   top: 18px;
+  background-color: rgba(0, 0, 0, 0.3);
   opacity: 0%;
 }
 .project-display-right > .container {
@@ -154,6 +155,12 @@
 }
 
 @media screen and (max-width: 992px) {
+  .project-display {
+    padding-bottom: 0px !important;
+  }
+  .project-display-right {
+    max-width: 400px;
+  }
   .project-display-title {
     font-size: 18px;
     text-align: center;
@@ -204,5 +211,8 @@
   }
   .section-title-container h3 {
     font-size: 18px;
+  }
+  .project-display-content-header {
+    text-align: center;
   }
 }
