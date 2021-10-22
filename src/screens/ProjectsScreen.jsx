@@ -21,10 +21,12 @@ const ProjectsScreen = () => {
   */
 
   useEffect(() => {
+    let width = window.innerWidth;
+    let smallScreen = width < 992;
     gsap.to(sectionHeader.current, {
       scrollTrigger: {
         trigger: project1Demo.current,
-        start: 'top 70%',
+        start: 'top 55%',
         toggleActions: 'play none none reverse',
       },
       duration: 0.3,
@@ -35,7 +37,7 @@ const ProjectsScreen = () => {
     gsap.to(projectsRef.current, {
       scrollTrigger: {
         trigger: project1Demo.current,
-        start: 'top 70%',
+        start: 'top 50%',
         toggleActions: 'play none none reverse',
       },
       duration: 0.1,
@@ -46,7 +48,7 @@ const ProjectsScreen = () => {
     gsap.to(project1Demo.current, {
       scrollTrigger: {
         trigger: project1Demo.current,
-        start: 'top 70%',
+        start: 'top 50%',
         toggleActions: 'play none none reverse',
       },
       duration: 0.3,
@@ -58,7 +60,7 @@ const ProjectsScreen = () => {
     gsap.to(project1Desc.current, {
       scrollTrigger: {
         trigger: project1Desc.current,
-        start: 'top 70%',
+        start: 'top 50%',
         toggleActions: 'play none none reverse',
       },
       duration: 0.3,
@@ -70,7 +72,7 @@ const ProjectsScreen = () => {
     gsap.to(project2Demo.current, {
       scrollTrigger: {
         trigger: project2Demo.current,
-        start: 'top 70%',
+        start: 'top 50%',
         toggleActions: 'play none none reverse',
       },
       duration: 0.3,
@@ -82,8 +84,11 @@ const ProjectsScreen = () => {
     gsap.to(project2Desc.current, {
       scrollTrigger: {
         trigger: project2Desc.current,
-        start: 'top 70%',
-        toggleActions: 'play none none reverse',
+        start: 'top 50%',
+        end: `${smallScreen ? 'bottom 45%' : ''}`,
+        toggleActions: `play ${smallScreen ? 'reverse' : 'none'} ${
+          smallScreen ? 'play' : 'none'
+        } reverse`,
       },
       duration: 0.3,
       opacity: '100%',

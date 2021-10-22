@@ -31,7 +31,18 @@ const ContactScreen = () => {
         start: 'top 60%',
         toggleActions: 'play none none reverse',
       },
+      duration: 0.3,
+      color: 'rgba(255,255,255,.5)',
+    });
+
+    gsap.to(locationRef.current, {
+      scrollTrigger: {
+        trigger: locationRef.current,
+        start: 'top 60%',
+        toggleActions: 'play none none reverse',
+      },
       duration: 0.2,
+      transform: 'scale(1.1)',
       color: 'white',
     });
 
