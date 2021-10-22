@@ -12,6 +12,13 @@ const ProjectsScreen = () => {
   const project2Demo = useRef(null);
   const project1Desc = useRef(null);
   const project2Desc = useRef(null);
+  const projectsRef = useRef(null);
+  /*
+  Project title should change to this when the text enters the center of the screen  
+  font-size: 42px;
+    text-align: center;
+    color: rgb(255 176 176);
+  */
 
   useEffect(() => {
     let width = window.innerWidth;
@@ -24,6 +31,19 @@ const ProjectsScreen = () => {
       duration: 0.3,
       opacity: '100%',
       ease: 'none',
+    });
+
+    gsap.to(projectsRef.current, {
+      scrollTrigger: {
+        trigger: projectsRef.current,
+        start: 'top 60%',
+        toggleActions: 'play reverse play reverse',
+        end: 'top',
+      },
+      duration: 0.2,
+      fontSize: '42px',
+      textAlign: 'center',
+      color: 'white',
     });
 
     gsap.to(project1Demo.current, {
@@ -80,7 +100,9 @@ const ProjectsScreen = () => {
       <Row className='project-display'>
         <div className='section-title-container' ref={sectionHeader}>
           <div className='section-title-hr'></div>
-          <h3 className='section-title'>Projects</h3>
+          <h3 className='section-title' ref={projectsRef}>
+            Projects
+          </h3>
           <div className='section-title-hr'></div>
         </div>
         <Col

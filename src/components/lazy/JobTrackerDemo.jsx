@@ -8,6 +8,7 @@ const JobTrackerDemo = () => {
       autoPlay
       loop
       muted
+      controls
       src='mp4/jobtracker-demo-final.mp4'
       poster='pngs/jt-poster.png'
     ></video>

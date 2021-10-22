@@ -14,14 +14,14 @@ const Header = ({ htmlRef }) => {
     gsap.to(headerRef.current, {
       scrollTrigger: {
         trigger: headerRef.current,
-        start: 'bottom 36px',
-        toggleActions: 'play none reverse none',
+        start: 'bottom 40px',
+        toggleActions: 'play none none reverse',
       },
-      duration: 0.15,
-      backgroundColor: 'rgba(0,0,0,.64)',
+      duration: 0.1,
+      backgroundColor: 'rgba(0,0,0,1)',
       paddingTop: '6px',
       height: '56px',
-      ease: 'slow',
+      ease: 'none',
     });
   }, []);
 
