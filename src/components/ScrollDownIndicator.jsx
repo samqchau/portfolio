@@ -1,20 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../styles/scrollDownIndicator.scss';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const ScrollDownIndicator = () => {
+  const wrapperRef = useRef(null);
+  const scrollDownRef = useRef(null);
   useEffect(() => {
-    function registerScroll() {
-      let wrapper = document.getElementById('wrapper');
-      wrapper.style.display = 'none';
-      window.removeEventListener('scroll', registerScroll);
-    }
-    window.addEventListener('scroll', registerScroll);
+    gsap.to(scrollDownRef.current, {
+      scrollTrigger: {
+        trigger: scrollDownRef.current,
+        start: 'bottom 100%-=5px',
+        toggleActions: 'play none none reverse',
+      },
+      opacity: '0%',
+      duration: 0.15,
+    });
   }, []);
 
   return (
-    <div id='wrapper'>
+    <div id='wrapper' ref={wrapperRef}>
       <div id='wrapper-inner'>
-        <div id='scroll-down'>
+        <div id='scroll-down' ref={scrollDownRef}>
           <span className='arrow-down'></span>
           <span id='scroll-title'>Scroll down</span>
         </div>

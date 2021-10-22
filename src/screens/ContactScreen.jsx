@@ -30,21 +30,8 @@ const ContactScreen = () => {
         trigger: locationRef.current,
         start: 'top 60%',
         toggleActions: 'play none none reverse',
-        markers: true,
-      },
-      color: '#939393',
-      duration: 0.2,
-    });
-
-    gsap.to(locationRef.current, {
-      scrollTrigger: {
-        trigger: locationRef.current,
-        start: 'top 60%',
-        end: 'bottom 57%',
-        toggleActions: 'play none none reverse',
       },
       duration: 0.2,
-      transform: 'scale(1.3)',
       color: 'white',
     });
 
@@ -55,19 +42,20 @@ const ContactScreen = () => {
         toggleActions: 'play none none reverse',
       },
       color: '#ffc272',
-      transform: 'scale(1.3)',
+      transform: 'scale(1.2)',
       duration: 0.2,
     });
 
     gsap.to(phoneRef.current, {
       scrollTrigger: {
-        trigger: phoneRef.current,
-        start: 'top 60%',
+        trigger: mailRef.current,
+        start: 'top 58%',
         end: 'bottom 60%',
         toggleActions: 'play none none reverse',
       },
       duration: 0.2,
-      transform: 'scale(1.3)',
+      transform: 'scale(1.2)',
+      color: 'white',
     });
   }, []);
 

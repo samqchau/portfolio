@@ -24,8 +24,8 @@ const ProjectsScreen = () => {
     let width = window.innerWidth;
     gsap.to(sectionHeader.current, {
       scrollTrigger: {
-        trigger: sectionHeader.current,
-        start: `top ${width > 800 ? '60%' : '82%'}`,
+        trigger: project1Demo.current,
+        start: 'top 70%',
         toggleActions: 'play none none reverse',
       },
       duration: 0.3,
@@ -35,14 +35,12 @@ const ProjectsScreen = () => {
 
     gsap.to(projectsRef.current, {
       scrollTrigger: {
-        trigger: projectsRef.current,
-        start: 'top 60%',
+        trigger: project1Demo.current,
+        start: 'top 70%',
         toggleActions: 'play none none reverse',
-        end: 'top',
       },
-      duration: 0.2,
-      fontSize: '42px',
-      textAlign: 'center',
+      duration: 0.1,
+      fontSize: '2rem',
       color: 'white',
     });
 
