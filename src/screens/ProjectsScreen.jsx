@@ -21,7 +21,6 @@ const ProjectsScreen = () => {
   */
 
   useEffect(() => {
-    let width = window.innerWidth;
     gsap.to(sectionHeader.current, {
       scrollTrigger: {
         trigger: project1Demo.current,

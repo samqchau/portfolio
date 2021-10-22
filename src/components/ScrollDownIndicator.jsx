@@ -13,11 +13,11 @@ const ScrollDownIndicator = () => {
     gsap.to(scrollDownRef.current, {
       scrollTrigger: {
         trigger: scrollDownRef.current,
-        start: 'bottom 100%-=90px',
+        start: 'bottom 100%-=120px',
         toggleActions: 'play none none reverse',
       },
       opacity: '0%',
-      duration: 0.15,
+      duration: 0.1,
     });
   }, []);
 
