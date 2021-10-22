@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 
 const ReturnToTop = ({ htmlRef }) => {
   const buttonRef = useRef(null);
+
   const handleClick = () => {
     htmlRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     htmlRef.current.scrollTop = 0;
@@ -13,7 +14,7 @@ const ReturnToTop = ({ htmlRef }) => {
     gsap.to(buttonRef.current, {
       scrollTrigger: {
         trigger: buttonRef.current,
-        start: 'top bottom-=60px',
+        start: 'top bottom-=90px',
         toggleActions: 'play none reverse none',
         end: 'center bottom',
       },

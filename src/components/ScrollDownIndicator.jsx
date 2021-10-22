@@ -13,7 +13,7 @@ const ScrollDownIndicator = () => {
     gsap.to(scrollDownRef.current, {
       scrollTrigger: {
         trigger: scrollDownRef.current,
-        start: 'bottom 100%-=5px',
+        start: 'bottom 100%-=90px',
         toggleActions: 'play none none reverse',
       },
       opacity: '0%',

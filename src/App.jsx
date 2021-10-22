@@ -22,12 +22,12 @@ function App() {
   return (
     <>
       <Header htmlRef={htmlRef} />
+      <ReturnToTop htmlRef={htmlRef} />
       <ScrollDownIndicator />
       <img className='background' src='pngs/back2.jpg' alt='' />
       <div className='app'>
         <div className='app-main'>
           <div className='app-main-content'>
-            <ReturnToTop htmlRef={htmlRef} />
             <div className='left-banner screen-banner' ref={bannerRef}>
               <HomeScreen />
               <ProjectsScreen />
