@@ -19,6 +19,8 @@
   box-sizing: border-box;
   user-select: none;
   overscroll-behavior-x: none;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: none;
 }
 
 html {
