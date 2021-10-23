@@ -6,6 +6,24 @@ import CopyAnimWrapper from '../components/CopyAnimWrapper';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const MailComponenet = () => {
+  const mailRef = useRef(null);
+  return (
+    <p className='mail' ref={mailRef}>
+      samqchau@gmail.com
+    </p>
+  );
+};
+
+const PhoneComponent = () => {
+  const phoneRef = useRef(null);
+  return (
+    <p className='phone' ref={phoneRef}>
+      +1 (626) 696 5465
+    </p>
+  );
+};
+
 const ContactScreen = () => {
   const contactRef = useRef(null);
   const headerRef = useRef(null);
@@ -59,6 +77,7 @@ const ContactScreen = () => {
           scale={'scale(1.08)'}
           start={'top 60%'}
           triggerRef={locationRef.current}
+          clipboardText={'samqchau@gmail.com'}
         />
         <CopyAnimWrapper
           HtmlBlockElement={PhoneComponent}
@@ -67,18 +86,11 @@ const ContactScreen = () => {
           start={'top 60%'}
           triggerRef={locationRef.current}
           animScale={0.8}
+          clipboardText={'626 696 5465'}
         />
       </div>
     </>
   );
-};
-
-const MailComponenet = () => {
-  return <p className='mail'>samqchau@gmail.com</p>;
-};
-
-const PhoneComponent = () => {
-  return <p className='phone'>+1 (626) 696 5465</p>;
 };
 
 export default ContactScreen;

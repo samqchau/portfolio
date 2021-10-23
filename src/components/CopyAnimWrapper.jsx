@@ -3,6 +3,7 @@ import CopyAnimation from './CopyAnimation';
 import '../styles/copyAnimWrapper.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import copyToClipboard from '../utils/copyToClipboard';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +16,7 @@ const CopyAnimWrapper = ({
   triggerRef,
   animScale,
   extraStyles,
+  clipboardText,
 }) => {
   const wrapperRef = useRef(null);
   const [copied, setCopied] = useState(false);
@@ -51,9 +53,8 @@ const CopyAnimWrapper = ({
         ...extraStyles,
       }}
       onClick={() => {
-        //Play Animation
         setCopied(true);
-        //Copy HTML Block Element inner text to clipboard
+        copyToClipboard(clipboardText);
       }}
     >
       <HtmlBlockElement />

@@ -34,8 +34,8 @@
   font-weight: bold;
   margin-left: 8px;
   cursor: pointer;
-  color: rgba(256, 256, 256, 0.4);
-  transition: color 0.2s linear;
+  color: rgba(256, 256, 256, 0.7);
+  transition: color 0.13s linear;
   &:hover {
     color: white;
   }
@@ -79,6 +79,12 @@
 }
 @media screen and (max-width: 480px) {
   .header-nav-socials {
-    display: none;
+    position: fixed;
+    top: 4px;
+    flex-direction: column;
+    right: 0px;
+  }
+  .header-nav-socials > a {
+    margin: 4px 0px;
   }
 }
