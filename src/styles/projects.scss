@@ -205,22 +205,21 @@
   }
   .project-display-right > .container > .container > h6 {
     width: 100%;
-    min-width: 110px;
+    max-width: fit-content;
     display: inline-block;
-    margin-right: 8px;
   }
   .project-display-content-list > li {
-    width: fit-content;
+    width: 100%;
     list-style: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
   }
   .project-display-content-list {
     margin-left: 20px;
+    width: fit-content;
     padding-left: 16px;
     border-left: 1px solid #ffc272;
-    width: fit-content;
-    min-width: 206px;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
   .project-display-right > .container > .container {
     display: flex;

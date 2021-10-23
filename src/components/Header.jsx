@@ -11,10 +11,13 @@ const Header = ({ htmlRef }) => {
   };
 
   useEffect(() => {
+    const width = window.innerWidth;
+    const xsScreen = width < 360;
+
     gsap.to(headerRef.current, {
       scrollTrigger: {
         trigger: headerRef.current,
-        start: 'bottom 40px',
+        start: `${xsScreen ? 'top top-=10' : 'bottom 40px'}`,
         toggleActions: 'play none none reverse',
       },
       duration: 0.1,

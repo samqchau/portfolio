@@ -19,8 +19,12 @@
   box-sizing: border-box;
   user-select: none;
   overscroll-behavior-x: none;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: auto;
   overflow-x: none;
+}
+
+body {
+  background-color: black;
 }
 
 html {
@@ -34,6 +38,7 @@ html,
 #root {
   height: fit-content;
   width: 100%;
+  min-width: fit-content;
   color: white;
   letter-spacing: 1px;
 }
