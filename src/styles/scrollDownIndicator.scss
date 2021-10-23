@@ -283,3 +283,8 @@
     transform: unset;
   }
 }
+@media screen and (max-width: 480px) {
+  #scroll-title {
+    display: none;
+  }
+}

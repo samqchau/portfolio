@@ -77,3 +77,8 @@
     padding-top: 6px !important;
   }
 }
+@media screen and (max-width: 480px) {
+  .header-nav-socials {
+    display: none;
+  }
+}

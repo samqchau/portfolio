@@ -11,7 +11,6 @@ const JobTrackerDemo = () => {
     <video
       ref={videoRef}
       style={demoStyle}
-      height='300'
       autoPlay
       loop
       muted
@@ -29,6 +28,8 @@ export const demoStyle = {
   marginBottom: '25px',
   WebkitMaskImage:
     'linear-gradient(90deg, transparent, 10%, rgb(0, 0, 0), 90%, transparent)',
+  width: '100%',
+  maxWidth: '600px',
 };
 
 export default JobTrackerDemo;

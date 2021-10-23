@@ -87,6 +87,7 @@ html::-webkit-scrollbar-thumb {
   min-width: 1400px;
   height: 100%;
   width: 100%;
+  vertical-align: center;
 }
 
 .app {
@@ -100,7 +101,6 @@ html::-webkit-scrollbar-thumb {
 }
 .app-main-content {
   width: 100%;
-  max-width: 1250px;
   height: fit-content;
 }
 .screen-banner {
@@ -113,7 +113,6 @@ html::-webkit-scrollbar-thumb {
   margin: auto;
 }
 .left-banner {
-  margin-top: 84px;
   border-left: 1px solid rgba(255, 255, 255, 0.432);
   border-radius: 30px;
   border-right: 1px solid rgba(122, 122, 122, 0.3);
@@ -124,13 +123,18 @@ html::-webkit-scrollbar-thumb {
   border-radius: 0px 30px 3px 30px;
 }
 @media screen and (max-width: 800px) {
-  .app {
-    padding-top: 74px;
-  }
   .screen-banner {
     width: 95%;
     margin: auto;
     flex-direction: column;
     justify-content: center;
+  }
+  .homeScreen {
+    padding-top: 0px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .left-banner {
+    margin-top: 24px;
   }
 }

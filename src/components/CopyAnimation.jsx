@@ -41,7 +41,6 @@ const CopyAnimation = ({ scale, copied }) => {
             }}
           />
           <Check
-            isVisible={copied}
             style={{
               color: colors.green[5],
               position: 'absolute',

@@ -13,7 +13,6 @@
 }
 .homeScreen-profile-picture {
   height: 300px;
-  min-width: 300px;
   width: 300px;
   border-radius: 50%;
   border: 3px solid rgba(256, 256, 256, 0.7);
@@ -24,8 +23,8 @@
 .homeScreen-banner-right {
   display: flex;
   flex-direction: column;
-  width: 330px;
-  min-width: 330px;
+  width: 100%;
+  max-width: 330px;
   margin-left: 50px;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -64,7 +63,7 @@
     flex-direction: column;
   }
   .homeScreen-banner-content {
-    text-align: justify;
+    text-align: left;
   }
   .homeScreen-banner-right {
     margin-left: 0px;
