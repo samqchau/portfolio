@@ -52,7 +52,7 @@ const CopyAnimWrapper = ({
         transform: `scale(${animScale ? animScale : 1})`,
         ...extraStyles,
       }}
-      onClick={() => {
+      onMouseDown={() => {
         setCopied(true);
         copyToClipboard(clipboardText);
       }}
