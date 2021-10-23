@@ -41,6 +41,7 @@
   min-width: 400px;
   width: 100%;
   align-items: center;
+  justify-content: center;
 }
 .project-display-left {
   display: flex;
@@ -135,6 +136,11 @@
   opacity: 0%;
   height: fit-content;
   border-radius: 5px;
+  border-radius: 12px;
+}
+.project-display-left,
+.project-display-right {
+  max-width: 470px !important;
 }
 .project-display-right > .container {
   display: flex;
