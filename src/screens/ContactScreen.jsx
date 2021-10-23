@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import '../styles/contactScreen.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import copyToClipboard from '../utils/copyToClipboard';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,7 +54,7 @@ const ContactScreen = () => {
         toggleActions: 'play none none reverse',
       },
       color: '#ffc272',
-      transform: 'scale(1.2)',
+      transform: 'scale(1.1)',
       duration: 0.2,
     });
 
@@ -77,10 +78,24 @@ const ContactScreen = () => {
         <p ref={locationRef} className='call'>
           Orange County, California
         </p>
-        <p ref={mailRef} className='mail'>
+        <p
+          ref={mailRef}
+          onClick={() => {
+            copyToClipboard('samqchau@gmail.com');
+          }}
+          className='mail'
+          title='Copy to Clipboard'
+        >
           samqchau@gmail.com
         </p>
-        <p ref={phoneRef} className='phone'>
+        <p
+          ref={phoneRef}
+          className='phone'
+          onClick={() => {
+            copyToClipboard('626 696 5465');
+          }}
+          title='Copy to Clipboard'
+        >
           +1 (626) 696 5465
         </p>
       </div>
