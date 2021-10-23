@@ -22,7 +22,8 @@
 }
 
 html {
-  overscroll-behavior-y: none;
+  overscroll-behavior-y: none !important;
+  overscroll-behavior-x: none !important;
 }
 
 body,

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import '../styles/contactScreen.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import copyToClipboard from '../utils/copyToClipboard';
+import CopyAnimWrapper from '../components/CopyAnimWrapper';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,8 +10,6 @@ const ContactScreen = () => {
   const contactRef = useRef(null);
   const headerRef = useRef(null);
   const locationRef = useRef(null);
-  const mailRef = useRef(null);
-  const phoneRef = useRef(null);
 
   useEffect(() => {
     gsap.to(contactRef.current, {
@@ -46,61 +44,41 @@ const ContactScreen = () => {
       transform: 'scale(1.1)',
       color: 'white',
     });
-
-    gsap.to(mailRef.current, {
-      scrollTrigger: {
-        trigger: mailRef.current,
-        start: 'top 60%',
-        toggleActions: 'play none none reverse',
-      },
-      color: '#ffc272',
-      transform: 'scale(1.1)',
-      duration: 0.2,
-    });
-
-    gsap.to(phoneRef.current, {
-      scrollTrigger: {
-        trigger: mailRef.current,
-        start: 'top 58%',
-        end: 'bottom 60%',
-        toggleActions: 'play none none reverse',
-      },
-      duration: 0.2,
-      transform: 'scale(1.2)',
-      color: 'white',
-    });
   }, []);
 
   return (
     <>
       <div className='contactScreen' id='contact' ref={contactRef}>
         <h3 ref={headerRef}>Stay Connected</h3>
-        <p ref={locationRef} className='call'>
+        <p ref={locationRef} className='location'>
           Orange County, California
         </p>
-        <p
-          ref={mailRef}
-          onClick={() => {
-            copyToClipboard('samqchau@gmail.com');
-          }}
-          className='mail'
-          title='Copy to Clipboard'
-        >
-          samqchau@gmail.com
-        </p>
-        <p
-          ref={phoneRef}
-          className='phone'
-          onClick={() => {
-            copyToClipboard('626 696 5465');
-          }}
-          title='Copy to Clipboard'
-        >
-          +1 (626) 696 5465
-        </p>
+        <CopyAnimWrapper
+          HtmlBlockElement={MailComponenet}
+          color={'#ffc272'}
+          scale={'scale(1.08)'}
+          start={'top 60%'}
+          triggerRef={locationRef.current}
+        />
+        <CopyAnimWrapper
+          HtmlBlockElement={PhoneComponent}
+          color={'white'}
+          scale={'scale(1)'}
+          start={'top 60%'}
+          triggerRef={locationRef.current}
+          animScale={0.8}
+        />
       </div>
     </>
   );
+};
+
+const MailComponenet = () => {
+  return <p className='mail'>samqchau@gmail.com</p>;
+};
+
+const PhoneComponent = () => {
+  return <p className='phone'>+1 (626) 696 5465</p>;
 };
 
 export default ContactScreen;

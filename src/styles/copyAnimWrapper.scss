@@ -1,0 +1,31 @@
+.copyAnimWrapper {
+  position: relative;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.1s background-color;
+  color: white;
+  border-radius: 5px;
+  justify-content: center;
+  width: fit-content;
+}
+
+.copyAnimWrapper:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.copyAnimWrapper:hover > .copyAnimationContainer {
+  border-color: rgba(0, 0, 0, 0.5);
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.copyAnimationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  width: 42px;
+  border-radius: 0px 5px 5px 0px;
+  border-left: 1px solid rgba(0, 0, 0, 0);
+}

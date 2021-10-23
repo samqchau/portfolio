@@ -18,16 +18,16 @@
   position: relative;
   font-size: 1rem;
 }
-p.mail {
-  font-size: 32px;
-  margin-bottom: 6px !important;
-}
-p.call {
+.contactScreen > p {
   margin-bottom: 0px !important;
-  color: #939393;
+}
+p.mail {
+  font-size: 28px;
+  padding: 0px 4px 0px 10px;
 }
 p.phone {
   font-size: 18px;
+  padding: 4px 4px 4px 10px;
 }
 img.imessage {
   height: 26px;
@@ -35,20 +35,13 @@ img.imessage {
   margin-left: 6px;
 }
 p.phone i {
-  font-size: 20px;
+  font-size: 22px;
   margin-right: 6px;
 }
 p.phone,
 p.mail {
-  cursor: pointer;
-  padding: 1px 10px 1px 10px;
-  transition: 0.1s background-color;
-}
-
-p.phone:hover,
-p.mail:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px !important;
 }
