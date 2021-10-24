@@ -13,12 +13,6 @@ const ProjectsScreen = () => {
   const project1Desc = useRef(null);
   const project2Desc = useRef(null);
   const projectsRef = useRef(null);
-  /*
-  Project title should change to this when the text enters the center of the screen  
-  font-size: 42px;
-    text-align: center;
-    color: rgb(255 176 176);
-  */
 
   useEffect(() => {
     let width = window.innerWidth;
@@ -178,8 +172,14 @@ const ProjectsScreen = () => {
           <h1 className='project-display-title'>ProShop</h1>
           <div className='project-display-demo'></div>
           <div className='project-display-link-container'>
-            <div className='project-display-link'>Code</div>
-            <div className='project-display-link'>Demo</div>
+            <a
+              href='https://github.com/samqchau/ProShop'
+              target='_blank'
+              rel='noreferrer'
+              className='project-display-link'
+            >
+              Code
+            </a>
           </div>
         </Col>
         <Col

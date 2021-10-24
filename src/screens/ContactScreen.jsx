@@ -83,7 +83,7 @@ const ContactScreen = () => {
           HtmlBlockElement={PhoneComponent}
           color={'white'}
           scale={'scale(1)'}
-          start={'top 60%'}
+          start={'top 58%'}
           triggerRef={locationRef.current}
           animScale={0.8}
           clipboardText={'626 696 5465'}

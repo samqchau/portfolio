@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import CopyAnimation from './CopyAnimation';
 import '../styles/copyAnimWrapper.scss';
 import { gsap } from 'gsap';
