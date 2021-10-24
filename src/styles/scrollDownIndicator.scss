@@ -284,6 +284,9 @@
   }
 }
 @media screen and (max-width: 480px) {
+  #wrapper {
+    display: none;
+  }
   #scroll-title {
     display: none;
   }

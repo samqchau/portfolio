@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import CopyAnimation from './CopyAnimation';
 import '../styles/copyAnimWrapper.scss';
 import { gsap } from 'gsap';
@@ -20,6 +20,27 @@ const CopyAnimWrapper = ({
 }) => {
   const wrapperRef = useRef(null);
   const [copied, setCopied] = useState(false);
+
+  /*
+  const handleCopy = useCallback(
+    (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!copied) {
+        setCopied(true);
+        copyToClipboard(clipboardText);
+      }
+    },
+    [copied, clipboardText]
+    );
+    
+    useEffect(() => {
+      wrapperRef.current.addEventListener('touchstart', handleCopy, {
+        passive: false,
+        capture: false,
+      });
+    }, []);
+    */
 
   useEffect(() => {
     gsap.to(wrapperRef.current, {
@@ -52,9 +73,14 @@ const CopyAnimWrapper = ({
         transform: `scale(${animScale ? animScale : 1})`,
         ...extraStyles,
       }}
-      onMouseDown={() => {
-        setCopied(true);
-        copyToClipboard(clipboardText);
+      onMouseUp={() => {
+        if (!copied) {
+          setCopied(true);
+          copyToClipboard(clipboardText);
+        }
+      }}
+      onTouchStart={(e) => {
+        wrapperRef.current.click();
       }}
     >
       <HtmlBlockElement />

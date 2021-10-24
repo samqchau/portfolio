@@ -17,8 +17,10 @@ const Header = ({ htmlRef }) => {
     gsap.to(headerRef.current, {
       scrollTrigger: {
         trigger: headerRef.current,
-        start: `${xsScreen ? 'top top-=10px' : 'bottom 40px'}`,
-        toggleActions: 'play none none reverse',
+        start: `${xsScreen ? 'bottom top' : 'bottom 40px'}`,
+        toggleActions: `${
+          xsScreen ? 'play none none none ' : 'play none none reverse'
+        }`,
       },
       duration: 0.1,
       backgroundColor: 'rgba(0,0,0,1)',

@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ScrollDownIndicator = () => {
   const wrapperRef = useRef(null);
   const scrollDownRef = useRef(null);
+
   useEffect(() => {
     gsap.to(scrollDownRef.current, {
       scrollTrigger: {

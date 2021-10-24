@@ -18,18 +18,13 @@
   padding: 0px;
   box-sizing: border-box;
   user-select: none;
-  overscroll-behavior-x: none;
-  -webkit-overflow-scrolling: auto;
+  -webkit-overflow-scrolling: touch;
   overflow-x: none;
+  overscroll-behavior: none;
 }
 
 body {
   background-color: black;
-}
-
-html {
-  overscroll-behavior-y: none !important;
-  overscroll-behavior-x: none !important;
 }
 
 body,
@@ -41,6 +36,7 @@ html,
   min-width: fit-content;
   color: white;
   letter-spacing: 1px;
+  position: relative;
 }
 
 hr {

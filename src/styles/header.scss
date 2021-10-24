@@ -3,6 +3,7 @@
 
 .header {
   width: 100%;
+  min-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,5 +87,8 @@
   }
   .header-nav-socials > a {
     margin: 4px 0px;
+  }
+  .header {
+    background-color: black;
   }
 }
