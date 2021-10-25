@@ -119,7 +119,14 @@ const ProjectsScreen = () => {
             >
               Code
             </a>
-            <div className='project-display-link'>Demo</div>
+            <a
+              className='project-display-link'
+              target='_blank'
+              rel='noreferrer'
+              href='https://samqchau.github.io/jobtrackr'
+            >
+              Demo
+            </a>
           </div>
         </Col>
         <Col
