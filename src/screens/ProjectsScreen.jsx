@@ -1,4 +1,5 @@
 import JobTrackerDemo from '../components/lazy/JobTrackerDemo';
+import ProShopDemo from '../components/ProShopDemo';
 import React, { useEffect, useRef } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import '../styles/projects.scss';
@@ -20,7 +21,7 @@ const ProjectsScreen = () => {
     gsap.to(sectionHeader.current, {
       scrollTrigger: {
         trigger: project1Demo.current,
-        start: 'top 60%',
+        start: 'top 75%',
         toggleActions: 'play none none reverse',
       },
       duration: 0.3,
@@ -30,7 +31,7 @@ const ProjectsScreen = () => {
     gsap.to(projectsRef.current, {
       scrollTrigger: {
         trigger: project1Demo.current,
-        start: 'top 60%',
+        start: 'top 75%',
         toggleActions: 'play none none reverse',
       },
       duration: 0.1,
@@ -41,7 +42,7 @@ const ProjectsScreen = () => {
     gsap.to(project1Demo.current, {
       scrollTrigger: {
         trigger: project1Demo.current,
-        start: 'top 60%',
+        start: 'top 75%',
         toggleActions: 'play none none reverse',
       },
       duration: 0.3,
@@ -53,7 +54,7 @@ const ProjectsScreen = () => {
     gsap.to(project1Desc.current, {
       scrollTrigger: {
         trigger: project1Desc.current,
-        start: 'top 60%',
+        start: 'top 75%',
         toggleActions: 'play none none reverse',
       },
       duration: 0.3,
@@ -65,7 +66,7 @@ const ProjectsScreen = () => {
     gsap.to(project2Demo.current, {
       scrollTrigger: {
         trigger: project2Demo.current,
-        start: 'top 60%',
+        start: 'top 75%',
         toggleActions: 'play none none reverse',
       },
       duration: 0.3,
@@ -77,8 +78,8 @@ const ProjectsScreen = () => {
     gsap.to(project2Desc.current, {
       scrollTrigger: {
         trigger: project2Desc.current,
-        start: 'top 60%',
-        end: `${smallScreen ? 'bottom 45%' : ''}`,
+        start: 'top 75%',
+        end: `${smallScreen ? 'bottom 25%' : ''}`,
         toggleActions: `play ${smallScreen ? 'reverse' : 'none'} ${
           smallScreen ? 'play' : 'none'
         } reverse`,
@@ -177,7 +178,7 @@ const ProjectsScreen = () => {
           ref={project2Demo}
         >
           <h1 className='project-display-title'>ProShop</h1>
-          <div className='project-display-demo'></div>
+          <ProShopDemo />
           <div className='project-display-link-container'>
             <a
               href='https://github.com/samqchau/ProShop'

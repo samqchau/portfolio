@@ -4,6 +4,7 @@
   height: 100%;
   position: absolute;
   min-height: 925px;
+  max-width: 1280px;
 }
 
 #wrapper-inner {
@@ -277,10 +278,9 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
   #scroll-down {
-    right: -100px;
-    transform: unset;
+    display: none;
   }
 }
 @media screen and (max-width: 480px) {

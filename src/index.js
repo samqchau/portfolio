@@ -11,7 +11,7 @@ import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename='/portfolio-v1.0.0'>
+    <Router basename='/portfolio'>
       <App />
     </Router>
   </React.StrictMode>,
