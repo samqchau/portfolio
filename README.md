@@ -1,2 +1,2 @@
 # Portfolio
-This portfolio was built using React.
+Checkout my portfolio at https://samqchau.github.io/portfolio/
