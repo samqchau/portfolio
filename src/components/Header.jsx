@@ -23,10 +23,11 @@ const Header = ({ htmlRef }) => {
         }`,
       },
       duration: 0.1,
-      backgroundColor: 'rgba(0,0,0,1)',
+      backgroundColor: 'rgba(0,0,0,.8)',
       paddingTop: '6px',
       height: '56px',
       ease: 'none',
+      backdropFilter: 'blur(5px)'
     });
   }, []);
 

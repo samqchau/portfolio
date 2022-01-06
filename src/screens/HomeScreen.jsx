@@ -19,10 +19,11 @@ const HomeScreen = () => {
 
   return (
     <div className='homeScreen'>
-      <div
+      <img
         alt='Sam profile'
         className='homeScreen-profile-picture'
         ref={pictureRef}
+        src="pngs/portrait.jpg"
       />
       <div className='homeScreen-banner-right' ref={contentRef}>
         <h1 className='homeScreen-banner-title'>Hi, I'm Sam Chau</h1>
