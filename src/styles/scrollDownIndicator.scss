@@ -22,8 +22,8 @@
   padding-top: 79px;
   text-align: center;
   z-index: -1;
-  bottom: 0%;
-  left: 50%;
+  bottom: 45px;
+  right: -50px;
   transform: translateX(-50%);
   opacity: 1;
 }
@@ -278,16 +278,23 @@
   }
 }
 
-@media screen and (min-width: 800px) {
-  #scroll-down {
-    display: none;
-  }
-}
 @media screen and (max-width: 480px) {
   #wrapper {
     display: none;
   }
   #scroll-title {
     display: none;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  #scroll-down {
+    right: 0px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #scroll-down {
+    left: 50%;
   }
 }
