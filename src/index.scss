@@ -84,7 +84,7 @@ html::-webkit-scrollbar-thumb {
   bottom: 0px;
   position: fixed;
   z-index: -10000;
-  min-height: 780px;
+  min-height: fit-content;
   min-width: 1400px;
   height: 100%;
   width: 100%;
@@ -144,12 +144,17 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 520px) {
   .screen-banner {
     width: 100%;
-    padding: 56px 0px 0px 0px;
+    padding: 56px 10px 0px 10px;
     margin: unset;
     border-radius: unset;
     border: unset;
+    min-width: 375px;
+    max-width: 520px;
+  }
+  .app-main {
+    margin: unset;
   }
 }
