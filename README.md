@@ -1,2 +1,2 @@
 # Portfolio
-Checkout my portfolio at https://samqchau.github.io/portfolio/
+Checkout my portfolio at https://samqchau.com
