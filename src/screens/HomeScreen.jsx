@@ -31,7 +31,7 @@ const HomeScreen = () => {
           a full-stack developer who specializes in using Javascript frameworks
           like React to build responsive and stateful websites.
         </p>
-        <a href='files/resume_sam_chau.pdf' download='sam_chau_resume'>
+        <a href='files/sam-chau-resume.pdf' download='sam_chau_resume'>
           <div className='homeScreen-banner-resume-button'>Download Resume</div>
         </a>
       </div>
