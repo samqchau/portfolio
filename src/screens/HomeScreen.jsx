@@ -32,7 +32,7 @@ const HomeScreen = () => {
           like React to build responsive and stateful websites.
         </p>
         <a href='files/sam-chau-resume.pdf' download='sam_chau_resume' onClick={() => {
-          gtag('Download Resume', 'Clicked download resume button', {
+          window.gtag('Download Resume', 'Clicked download resume button', {
             'event_category': 'downloaded',
             'event_label': 'downloaded resume',
           });
