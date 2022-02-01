@@ -8,6 +8,7 @@ const Header = ({ htmlRef }) => {
     e.stopPropagation();
     htmlRef.current.scrollTop = 0;
     window.history.replaceState({}, '', window.location.pathname);
+    ga4HeaderLinkClick('#Home')
   };
 
   useEffect(() => {
@@ -31,6 +32,13 @@ const Header = ({ htmlRef }) => {
     });
   }, []);
 
+  function ga4HeaderLinkClick (label) {
+    window.gtag('Header', 'Click', {
+      'event_category': 'Navigation Click',
+      'event_label': label,
+    });
+  }
+
   return (
     <div className='header' ref={headerRef}>
       <div className='header-nav'>
@@ -39,6 +47,7 @@ const Header = ({ htmlRef }) => {
             href='https://www.linkedin.com/in/samqchau/'
             target='_blank'
             rel='noreferrer'
+            onClick={() => {ga4HeaderLinkClick('LinkedIn')}}
           >
             <div className='icon-container' title='LinkedIn' alt='LinkedIn'>
               <img
@@ -52,6 +61,7 @@ const Header = ({ htmlRef }) => {
             href='https://github.com/samqchau'
             target='_blank'
             rel='noreferrer'
+            onClick={() => {ga4HeaderLinkClick('GitHub')}}
           >
             <div className='icon-container' title='Github' alt='Github'>
               <img className='gh-icon' src='pngs/gh_64.png' alt='Github' />
@@ -61,6 +71,7 @@ const Header = ({ htmlRef }) => {
             href='https://codepen.io/samqchau'
             target='_blank'
             rel='noreferrer'
+            onClick={() => {ga4HeaderLinkClick('CodePen')}}
           >
             <div className='icon-container' title='Codepen' alt='Codepen'>
               <img className='icon' src='pngs/codepen.png' alt='Codepen' />
@@ -71,10 +82,10 @@ const Header = ({ htmlRef }) => {
           <div className={`header-nav-item`} onClick={homeHandler}>
             Home
           </div>
-          <a href='#projects'>
+          <a href='#projects' onClick={() => {ga4HeaderLinkClick('#Projects')}}>
             <div className={`header-nav-item`}>Projects</div>
           </a>
-          <a href='#contact'>
+          <a href='#contact' onClick={() => {ga4HeaderLinkClick('#Contact')}}>
             <div className={`header-nav-item`}>Contact</div>
           </a>
         </div>
