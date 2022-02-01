@@ -35,7 +35,6 @@ const HomeScreen = () => {
           gtag('Download Resume', 'Clicked download resume button', {
             'event_category': 'downloaded',
             'event_label': 'downloaded resume',
-            'value': 'resume'
           });
         }}>
           <div className='homeScreen-banner-resume-button'>Download Resume</div>
