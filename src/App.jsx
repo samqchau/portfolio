@@ -1,4 +1,7 @@
 import { useRef, useEffect } from 'react';
+
+import ReactGA from 'react-ga';
+
 import Header from './components/Header';
 import HomeScreen from './screens/HomeScreen';
 import ContactScreen from './screens/ContactScreen';
@@ -16,6 +19,9 @@ function App() {
   const htmlRef = useRef(null);
 
   useEffect(() => {
+    ReactGA.initialize('G-SF2Z1QGRKN')
+    ReactGA.pageview(window.location.pathname + window.location.search)
+
     htmlRef.current = document.getElementsByTagName('html')[0];
   }, []);
 

@@ -1,13 +1,17 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import '../styles/header.scss';
+import ReactGA from 'react-ga';
+
 
 const Header = ({ htmlRef }) => {
   const headerRef = useRef(null);
+  
   const homeHandler = (e) => {
     e.stopPropagation();
     htmlRef.current.scrollTop = 0;
     window.history.replaceState({}, '', window.location.pathname);
+    navigationClick('Home')
   };
 
   useEffect(() => {
@@ -31,6 +35,14 @@ const Header = ({ htmlRef }) => {
     });
   }, []);
 
+  function navigationClick (label) {
+    ReactGA.event({
+      category: 'Navigation',
+      action: 'Clicked',
+      label
+    })
+  }
+
   return (
     <div className='header' ref={headerRef}>
       <div className='header-nav'>
@@ -39,6 +51,7 @@ const Header = ({ htmlRef }) => {
             href='https://www.linkedin.com/in/samqchau/'
             target='_blank'
             rel='noreferrer'
+            onClick={() => {navigationClick('LinkedIn')}}
           >
             <div className='icon-container' title='LinkedIn' alt='LinkedIn'>
               <img
@@ -52,6 +65,7 @@ const Header = ({ htmlRef }) => {
             href='https://github.com/samqchau'
             target='_blank'
             rel='noreferrer'
+            onClick={() => {navigationClick('GitHub')}}
           >
             <div className='icon-container' title='Github' alt='Github'>
               <img className='gh-icon' src='pngs/gh_64.png' alt='Github' />
@@ -61,6 +75,7 @@ const Header = ({ htmlRef }) => {
             href='https://codepen.io/samqchau'
             target='_blank'
             rel='noreferrer'
+            onClick={() => {navigationClick('CodePen')}}
           >
             <div className='icon-container' title='Codepen' alt='Codepen'>
               <img className='icon' src='pngs/codepen.png' alt='Codepen' />
@@ -71,10 +86,10 @@ const Header = ({ htmlRef }) => {
           <div className={`header-nav-item`} onClick={homeHandler}>
             Home
           </div>
-          <a href='#projects'>
+          <a href='#projects' onClick={() => {navigationClick('Projects Section')}}>
             <div className={`header-nav-item`}>Projects</div>
           </a>
-          <a href='#contact'>
+          <a href='#contact' onClick={() => {navigationClick('Contact Section')}}>
             <div className={`header-nav-item`}>Contact</div>
           </a>
         </div>
