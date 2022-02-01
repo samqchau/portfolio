@@ -33,8 +33,8 @@ const Header = ({ htmlRef }) => {
   }, []);
 
   function ga4HeaderLinkClick (label) {
-    window.gtag('Header', 'Click', {
-      'event_category': 'Navigation Click',
+    window.gtag('event', 'Click', {
+      'event_category': 'Navigation',
       'event_label': label,
     });
   }
